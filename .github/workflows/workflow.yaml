@@ -18,8 +18,7 @@ jobs:
       - name: Install Newman
         uses: matt-ball/newman-action@master
         with:
-          collection: postman_collection.json
-          environment: postman_environment.json
+          collection: tests/calc_ut.postman_collection.json
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
