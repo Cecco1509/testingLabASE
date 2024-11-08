@@ -16,14 +16,13 @@ jobs:
         uses: actions/setup-node@v4
 
       - name: Install Newman
-      - uses: actions/checkout@master
-      - uses: matt-ball/newman-action@master
+        uses: matt-ball/newman-action@master
         with:
           collection: postman_collection.json
           environment: postman_environment.json
 
-      name: Set up QEMU
+      - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
-      -
-        name: Set up Docker Buildx
+
+      - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
